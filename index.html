@@ -7,34 +7,68 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 300px;
+            max-width: 350px;
             margin: 50px auto;
             text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         input {
-            width: 80%;
-            padding: 8px;
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
         }
         button {
-            padding: 8px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
         }
         ul {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
         }
         li {
             display: flex;
             justify-content: space-between;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
         }
     </style>
 </head>
 <body>
     <h2>To-Do List</h2>
     <input type="text" id="taskInput" placeholder="Enter task...">
-    <button onclick="addTask()">Add</button>
+    <button onclick="addTask()">Add Task</button>
     <ul id="taskList"></ul>
 
     <script>
@@ -58,7 +92,7 @@
             taskList.innerHTML = "";
             tasks.forEach((task, index) => {
                 let li = document.createElement("li");
-                li.innerHTML = `${task} <button onclick="removeTask(${index})">X</button>`;
+                li.innerHTML = `${task} <button class="delete-btn" onclick="removeTask(${index})">X</button>`;
                 taskList.appendChild(li);
             });
         }
