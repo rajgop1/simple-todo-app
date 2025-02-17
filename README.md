@@ -3,6 +3,12 @@
 ## Objective
 Apoorva, your task is to create a simple **To-Do application** using **HTML, CSS, and JavaScript** that stores tasks in **localStorage**. The application should allow users to **add**, **view**, and **delete** tasks.
 
+## Demo
+Visit the following link to see a **Demo**:  
+🔗 [Simple To-Do App](https://rajgop1.github.io/simple-todo-app/)  
+
+⚠ **Important:** Please **do not** open the `index.html` file, as it contains the actual code to create this app. Instead, create your own HTML file within this same repository and complete your task.
+
 ---
 
 ## Requirements
